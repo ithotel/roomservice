@@ -1,546 +1,160 @@
-/* ==========================
-   SIMA HOTEL ROOM SERVICE
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f7f7f5;
-    color:#333;
-    overflow-x:hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMA Hotel | Room Service</title>
 
-/* HERO */
+    <link rel="stylesheet" href="style.css">
 
-.hero{
-    position:relative;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.hero-bg{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    animation:zoom 18s ease-in-out infinite alternate;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
-}
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    width:90%;
-    max-width:500px;
-    text-align:center;
-    color:#fff;
+<body>
+    <div id="loader">
 
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(18px);
+    <div class="loader-content">
 
-    padding:40px;
-    border-radius:24px;
+        <img src="assets/logo.png" alt="SIMA Hotel Logo">
 
-    border:1px solid rgba(255,255,255,.25);
+        <h2>SIMA HOTEL</h2>
 
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
-}
+        <p>Loading...</p>
 
-.logo{
-    width:90px;
-    margin-bottom:20px;
-}
+        <div class="loading-bar">
+            <span></span>
+        </div>
 
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:42px;
-    margin-bottom:12px;
-}
+    </div>
 
-.hero p{
-    opacity:.9;
-    line-height:1.7;
-    margin-bottom:30px;
-}
+</div>
 
-/* BUTTON */
+    <!-- HERO -->
+    <header class="hero">
 
-.buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
+        <div class="overlay"></div>
 
-.btn{
+        <img src="assets/hero.jpg" class="hero-bg">
 
-    text-decoration:none;
+        <div class="hero-content">
 
-    padding:14px 24px;
+            <img src="assets/logo.png" class="logo" alt="Logo">
 
-    border-radius:50px;
+            <h1>Room Service Menu</h1>
 
-    font-weight:600;
+            <p>
+                Experience exceptional dining from the comfort of your room.
+            </p>
 
-    transition:.3s;
-}
+            <div class="buttons">
 
-.primary{
+                <a href="#menu" class="btn primary">
+                    <i class="fa-solid fa-utensils"></i>
+                    View Menu
+                </a>
 
-    background:#82A88F;
-    color:#fff;
+                <a href="assets/Room-Service-Menu.pdf"
+                    target="_blank"
+                    class="btn secondary">
 
-}
+                    <i class="fa-solid fa-file-pdf"></i>
 
-.secondary{
+                    Download PDF
 
-    background:#3D2510;
-    color:#fff;
+                </a>
 
-}
+            </div>
 
-.btn:hover{
+            <div class="contact">
 
-    transform:translateY(-3px);
+                <p>Need Assistance?</p>
 
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+                <a href="tel:+6281228438040">
 
-}
+                    <i class="fa-solid fa-phone"></i>
 
-/* CONTACT */
+                    +62 812-2843-8040
 
-.contact{
+                </a>
 
-    margin-top:30px;
+            </div>
 
-}
+            <div class="scroll-down">
 
-.contact p{
+                <i class="fa-solid fa-chevron-down"></i>
 
-    margin-bottom:10px;
+            </div>
 
-}
+        </div>
 
-.contact a{
+    </header>
 
-    color:#fff;
+    <!-- MENU -->
 
-    text-decoration:none;
+<section class="gallery" id="menu">
 
-    font-weight:600;
+    <h2>Our Digital Menu</h2>
 
-}
+    <p class="page-info">
+        Swipe to view our menu
+    </p>
 
-/* SCROLL */
+    <div class="swiper menuSwiper">
 
-.scroll-down{
+        <div class="swiper-wrapper">
 
-    margin-top:35px;
+            <div class="swiper-slide">
+                <img src="assets/cover.jpg" alt="Cover Menu">
+            </div>
 
-    font-size:26px;
+            <div class="swiper-slide">
+                <img src="assets/menu1.jpg" alt="Menu 1">
+            </div>
 
-    animation:bounce 2s infinite;
+            <div class="swiper-slide">
+                <img src="assets/menu2.jpg" alt="Menu 2">
+            </div>
 
-}
+            <div class="swiper-slide">
+                <img src="assets/menu3.jpg" alt="Menu 3">
+            </div>
 
-/* GALLERY */
+        </div>
 
-.gallery{
+        <div class="swiper-pagination"></div>
 
-    max-width:1100px;
+    </div>
 
-    margin:auto;
+</section>
 
-    padding:80px 20px;
+    <!-- FLOATING BUTTON -->
 
-}
+    <a href="https://wa.me/6281228438040"
+        class="whatsapp"
+        target="_blank">
 
-.gallery h2{
+        <i class="fa-brands fa-whatsapp"></i>
 
-    text-align:center;
+    </a>
 
-    font-size:38px;
+    <!-- BACK TO TOP -->
 
-    color:#3D2510;
+    <button id="topBtn">
 
-    margin-bottom:50px;
+        <i class="fa-solid fa-arrow-up"></i>
 
-    font-family:'Playfair Display';
+    </button>
 
-}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
-.menu-card{
+</body>
 
-    background:#fff;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    margin-bottom:40px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-    transition:.4s;
-
-}
-
-.menu-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.menu-card img{
-
-    width:100%;
-
-    display:block;
-
-}
-
-.menu-card h3{
-
-    padding:20px;
-
-    text-align:center;
-
-    color:#3D2510;
-
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:25px;
-
-    width:60px;
-
-    height:60px;
-
-    border-radius:50%;
-
-    background:#25D366;
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:28px;
-
-    text-decoration:none;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-    z-index:1000;
-
-}
-
-/* TOP BUTTON */
-
-#topBtn{
-
-    position:fixed;
-
-    left:25px;
-
-    bottom:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#3D2510;
-
-    color:#fff;
-
-    cursor:pointer;
-
-    display:none;
-
-    font-size:20px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-}
-
-/* REVEAL */
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(70px);
-
-    transition:all .8s ease;
-
-}
-
-.reveal.active{
-
-    opacity:1;
-
-    transform:none;
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.hero-content{
-
-padding:30px 20px;
-
-}
-
-.hero h1{
-
-font-size:34px;
-
-}
-
-.gallery h2{
-
-font-size:30px;
-
-}
-
-.buttons{
-
-flex-direction:column;
-
-}
-
-.btn{
-
-width:100%;
-
-}
-
-}
-
-/* ANIMATION */
-
-@keyframes bounce{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(10px);
-
-}
-
-}
-
-@keyframes zoom{
-
-from{
-
-transform:scale(1);
-
-}
-
-to{
-
-transform:scale(1.08);
-
-}
-
-}
-/* ==========================
-   LOADING SCREEN
-========================== */
-
-#loader{
-    position:fixed;
-    inset:0;
-    background:#f8f8f5;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    transition:opacity .6s ease, visibility .6s ease;
-}
-
-#loader.hide{
-    opacity:0;
-    visibility:hidden;
-}
-
-.loader-content{
-    text-align:center;
-}
-
-.loader-content img{
-    width:110px;
-    margin-bottom:20px;
-    animation:logoFloat 2s ease-in-out infinite;
-}
-
-.loader-content h2{
-    font-family:'Playfair Display', serif;
-    color:#3D2510;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-.loader-content p{
-    color:#666;
-    margin-bottom:20px;
-}
-
-.loading-bar{
-    width:180px;
-    height:6px;
-    background:#ddd;
-    border-radius:50px;
-    overflow:hidden;
-    margin:auto;
-}
-
-.loading-bar span{
-    display:block;
-    height:100%;
-    width:0;
-    background:#82A88F;
-    animation:loading 1.8s ease forwards;
-}
-
-@keyframes loading{
-    from{width:0;}
-    to{width:100%;}
-}
-
-@keyframes logoFloat{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-8px);
-    }
-}
-/* ==========================
-   SWIPER MENU
-========================== */
-
-.gallery{
-    padding:80px 20px;
-    background:#f8f8f5;
-}
-
-.gallery h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-family:'Playfair Display',serif;
-    color:#3D2510;
-}
-
-.menuSwiper{
-    max-width:900px;
-    margin:auto;
-}
-
-.swiper-slide{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.swiper-slide img{
-    width:100%;
-    border-radius:18px;
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
-    cursor:pointer;
-}
-
-.swiper-pagination-bullet-active{
-    background:#82A88F;
-}
-.swiper-button-next,
-.swiper-button-prev{
-
-    width:45px;
-    height:45px;
-
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:50%;
-
-    color:#3D2510;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-
-
-.swiper-button-next::after,
-.swiper-button-prev::after{
-
-    font-size:16px;
-    font-weight:bold;
-
-}
-
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover{
-
-    background:#82A88F;
-
-    color:white;
-
-}
-.page-info{
-
-    text-align:center;
-
-    color:#777;
-
-    margin-top:-25px;
-
-    margin-bottom:30px;
-
-    font-size:14px;
-
-    letter-spacing:.5px;
-
-}
+</html>
