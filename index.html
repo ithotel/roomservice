@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SIMA Hotel | Room Service</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
+
+    <!-- ==========================
+         LOADING
+    =========================== -->
+
     <div id="loader">
 
-    <div class="loader-content">
+        <div class="loader-content">
 
-        <img src="assets/logo.png" alt="SIMA Hotel Logo">
+            <img src="assets/logo.png" alt="SIMA Hotel Logo">
 
-        <h2>SIMA HOTEL</h2>
+            <h2>SIMA HOTEL</h2>
 
-        <p>Loading...</p>
+            <p>Loading...</p>
 
-        <div class="loading-bar">
-            <span></span>
+            <div class="loading-bar">
+
+                <span></span>
+
+            </div>
+
         </div>
 
     </div>
 
-</div>
+    <!-- ==========================
+         HERO
+    =========================== -->
 
-    <!-- HERO -->
     <header class="hero">
 
         <div class="overlay"></div>
 
-        <img src="assets/hero.jpg" class="hero-bg">
+        <img src="assets/hero.jpg" class="hero-bg" alt="Hero">
 
         <div class="hero-content">
 
@@ -56,8 +72,11 @@
             <div class="buttons">
 
                 <a href="#menu" class="btn primary">
+
                     <i class="fa-solid fa-utensils"></i>
+
                     View Menu
+
                 </a>
 
                 <a href="assets/Room-Service-Menu.pdf"
@@ -96,51 +115,71 @@
 
     </header>
 
-    <!-- MENU -->
+    <!-- ==========================
+         MENU
+    =========================== -->
 
-<section class="gallery" id="menu">
+    <section class="gallery" id="menu">
 
-    <h2>Our Digital Menu</h2>
+        <h2>Our Digital Menu</h2>
 
-    <p class="page-info">
-        Swipe to view our menu
-    </p>
+        <p class="page-info">
 
-<div class="swiper-wrapper">
+            Swipe left or right to explore our menu
 
-    <div class="swiper-slide">
-        <img src="assets/cover.jpg" alt="Cover Menu">
-    </div>
+        </p>
 
-    <div class="swiper-slide">
-        <img src="assets/menu1.jpg" alt="Breakfast">
-    </div>
+        <div class="swiper menuSwiper">
 
-    <div class="swiper-slide">
-        <img src="assets/menu2.jpg" alt="Main Course">
-    </div>
+            <div class="swiper-wrapper">
 
-    <div class="swiper-slide">
-        <img src="assets/menu3.jpg" alt="Beverage">
-    </div>
+                <div class="swiper-slide">
 
-    <div class="swiper-slide">
-        <img src="assets/menu4.jpg" alt="Dessert">
-    </div>
+                    <img src="assets/cover.jpg" alt="Cover Menu">
 
-    <div class="swiper-slide">
-        <img src="assets/menu5.jpg" alt="Special Menu">
-    </div>
+                </div>
 
-</div>
+                <div class="swiper-slide">
 
-        <div class="swiper-pagination"></div>
+                    <img src="assets/menu1.jpg" alt="Breakfast">
 
-    </div>
+                </div>
 
-</section>
+                <div class="swiper-slide">
 
-    <!-- FLOATING BUTTON -->
+                    <img src="assets/menu2.jpg" alt="Main Course">
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <img src="assets/menu3.jpg" alt="Beverage">
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <img src="assets/menu4.jpg" alt="Dessert">
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <img src="assets/menu5.jpg" alt="Special Menu">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         WHATSAPP
+    =========================== -->
 
     <a href="https://wa.me/6281228438040"
         class="whatsapp"
@@ -150,7 +189,9 @@
 
     </a>
 
-    <!-- BACK TO TOP -->
+    <!-- ==========================
+         BACK TO TOP
+    =========================== -->
 
     <button id="topBtn">
 
@@ -158,8 +199,13 @@
 
     </button>
 
+    <!-- ==========================
+         SCRIPT
+    =========================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
