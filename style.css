@@ -490,11 +490,6 @@ transform:scale(1.08);
     cursor:pointer;
 }
 
-.swiper-button-next,
-.swiper-button-prev{
-    color:#82A88F;
-}
-
 .swiper-pagination-bullet-active{
     background:#82A88F;
 }
