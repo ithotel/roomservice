@@ -2,7 +2,11 @@
 // SIMA HOTEL ROOM SERVICE
 // ===============================
 
+
+// ===============================
 // Reveal Animation
+// ===============================
+
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -14,7 +18,9 @@ function revealOnScroll() {
         const revealPoint = 120;
 
         if (revealTop < windowHeight - revealPoint) {
+
             item.classList.add("active");
+
         }
 
     });
@@ -24,45 +30,53 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
+
+// ===============================
 // Back To Top Button
+// ===============================
 
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll", () => {
+if(topBtn){
 
-    if (window.scrollY > 300) {
+    window.addEventListener("scroll", () => {
 
-        topBtn.style.display = "flex";
+        if (window.scrollY > 300) {
 
-        topBtn.style.alignItems = "center";
+            topBtn.style.display = "flex";
+            topBtn.style.alignItems = "center";
+            topBtn.style.justifyContent = "center";
 
-        topBtn.style.justifyContent = "center";
+        } else {
 
-    } else {
+            topBtn.style.display = "none";
 
-        topBtn.style.display = "none";
-
-    }
-
-});
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
+        }
 
     });
 
-});
 
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top:0,
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
+
+
+// ===============================
 // Hero Button Smooth Scroll
+// ===============================
 
 const menuButton = document.querySelector('.primary');
 
-if (menuButton) {
+if(menuButton){
 
     menuButton.addEventListener("click", function(e){
 
@@ -77,6 +91,8 @@ if (menuButton) {
     });
 
 }
+
+
 // ===============================
 // Loading Screen
 // ===============================
@@ -85,27 +101,24 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        document.getElementById("loader").classList.add("hide");
+        const loader = document.getElementById("loader");
 
-    }, 1800);
+        if(loader){
+
+            loader.classList.add("hide");
+
+        }
+
+    },1800);
 
 });
-const swiper = new Swiper(".menuSwiper",{
 
-    loop:true,
 
-    spaceBetween:30,
+// ===============================
+// SWIPER DIGITAL MENU
+// ===============================
 
-    grabCursor:true,
-
-    centeredSlides:true,
-
-    pagination:{
-        el:".swiper-pagination",
-        clickable:true,
-    },
-
-   const swiper = new Swiper(".menuSwiper",{
+const swiper = new Swiper(".menuSwiper", {
 
     loop:false,
 
@@ -122,8 +135,11 @@ const swiper = new Swiper(".menuSwiper",{
     allowTouchMove:true,
 
     pagination:{
+
         el:".swiper-pagination",
+
         clickable:true,
+
     },
 
 });
