@@ -105,9 +105,25 @@ const swiper = new Swiper(".menuSwiper",{
         clickable:true,
     },
 
-    navigation:{
-        nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev",
+   const swiper = new Swiper(".menuSwiper",{
+
+    loop:false,
+
+    slidesPerView:1,
+
+    spaceBetween:30,
+
+    grabCursor:true,
+
+    touchRatio:1,
+
+    simulateTouch:true,
+
+    allowTouchMove:true,
+
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true,
     },
 
 });
